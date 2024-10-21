@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+</head>
+<body>
+    <table id="myTable" border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+    </table>
+    <button onclick="addRow()">Add Row</button>
+
+    <script>
+    function addRow() {
+      // Get the table by its ID
+      var table = document.getElementById("myTable");
+  
+      // Create a new row
+      var newRow = table.insertRow();
+  
+      // Create cells and prompt user for input
+      var nameCell = newRow.insertCell(0);
+      var ageCell = newRow.insertCell(1);
+      var cityCell = newRow.insertCell(2);
+  
+      // Prompt user for input and set cell values
+      nameCell.innerHTML = prompt("Enter name:");
+      ageCell.innerHTML = prompt("Enter age:");
+      cityCell.innerHTML = prompt("Enter city:");
+  }
+
+</script>
+</body>
+</html>
